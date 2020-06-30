@@ -40,8 +40,8 @@ login(model: any){
     })
   );
 }
-  Register(model: any){
-    return this.http.post(this.baseUrl + 'register', model);
+  Register(user: User){
+    return this.http.post(this.baseUrl + 'register', user);
   }
   loggedIn(){
     const token = localStorage.getItem('token');
